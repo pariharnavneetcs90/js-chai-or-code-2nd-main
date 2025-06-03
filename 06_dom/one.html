@@ -1,0 +1,140 @@
+<!-- https://www.youtube.com/watch?v=DcjNkHtDj8A&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=31 -->
+<!--32 vedio ki bhi same file hai-->
+<!--31 daigram hai abhi nahi banaya-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dom learning</title>
+
+</head>
+
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">Dom learning on chai or code <span style="display: none;"> test text </span></h1>
+        <!--document.getElementById('title') // h1 selefct kar le ga
+            document.getElementById('title').id // o/p id me kya hai titile
+            document.getElementById('title').className // o/p 'headiding'
+
+            document.getElementById('title').getAttribute('id')
+            "title"
+
+            document.getElementById('title').getAttribute('class')
+            "heading" 
+
+            document.getElementById('title').setAttribute('class', 'test')
+            o/p class="test" // sirf test likhe ga to heading and hata ke sirf test overright kar de ga agar dono chaiye to neeche wala code dheko
+
+            document.getElementById('title').setAttribute('class', 'test heading')
+            o/p class="test heading"
+------------------------------------------------------------------------------------------------------------------------------------------
+            const yetitle = document.getElementById('title') // getElementbyid ko ek varible me store kar diya hai
+            undefined
+
+            yetitle // ab is varibale ko call kare ga to getelement by id a jaye ga title ka
+            <h1 id="title" class="heading">
+
+            const yetitle = document.getElementById('title')
+            undefined
+
+            yetitle
+            <h1 id="title" class="heading">
+
+            yetitle.style.backgroundColor = "green"
+            "green"
+
+            yetitle.style.padding = "15px"
+            "15px"
+
+            yetitle.style.borderRadius = "30px"
+            "30px"     
+-------------------------------------------------------------------------------------------------------------
+            const yetitle = document.getElementById('title')
+            undefined
+
+            yetitle.innerText
+            "Dom learning on chai or code"
+        
+            yetitle.textContent
+            "Dom learning on chai or code  test text  "
+
+            yetitle.innerHTML
+            'Dom learning on chai or code <span style="display: none;"> test text  </span>' 
+-------------------------------------------------------------------------------------------------------------------------
+            document.querySelector('h2')
+            <h2> // sirf phela h2 select karta hai
+
+            document.querySelector('#title')
+            <h1 id="title" class="heading">
+
+            document.querySelector('.heading')
+            <h1 id="title" class="heading">
+
+            document.querySelector('input[type="password"]')
+            <input id="" type="password" name="">
+        -->
+        <h2>1</h2>
+        <h2>2</h2>
+        <h2>3</h2>
+        <input type="password" name="" id="">
+        <p> Lorem ipsum dolor sit amet consectetur corrupti eaque odio aut tempore doloremque, deserunt officia?</p>
+    </div>
+</body>
+
+</html>
+
+<!-- chat gpt
+DOM stands for Document Object Model.
+It is a programming interface that represents a web page (HTML or XML) as a tree-like structure that JavaScript can interact with. 
+
+<!DOCTYPE html>
+<html>
+  <head><title>Page</title></head>
+  <body>
+    <h1>Hello World</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+-----------------------------------------------
+Gets turned into a DOM Tree in memory like:
+
+Document
+└── html
+    ├── head
+    │   └── title
+    └── body
+        ├── h1
+        └── p
+------------------------------------------------------------------------
+This structure is what JavaScript uses to read, update, or delete parts of the page.        
+
+ Example: Changing the Page with DOM
+---------------------------------------------------------
+document.querySelector('h1').textContent = 'Welcome!';
+------------------------------------------------------------------
+    document = the whole webpage
+
+    .querySelector('h1') = find the <h1> tag
+
+    .textContent = 'Welcome!' = change the text inside
+
+--------------------------------------------------------
+
+📦 DOM is:
+
+    Not HTML itself — it’s a JavaScript object representation of HTML
+
+    What makes it possible for JavaScript to interact with web pages
+
+    Created by the browser automatically when it loads a web page
+
+🔧 What You Can Do with DOM:
+
+    Change text, styles, and attributes
+
+    Add or remove elements
+
+    Respond to user events (clicks, input, etc.)    
+
+-->
