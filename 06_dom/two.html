@@ -1,0 +1,37 @@
+<!-- https://www.youtube.com/watch?v=xAvTgCsCHLs&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=33 -->
+<!--  33 -->
+<!-- how to open live server -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom hai ye</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <!-- div.day*4 short cut -->
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tueddddddddddddddddddddddddds</div>
+        <div class="day">thersday</div>
+        <div class="day">friday</div>
+
+    </div>
+</body>
+<script>
+    const meraparent = document.querySelector('.parent')
+    console.log(meraparent)
+    console.log(meraparent.children) // ye children ek property hai 
+    console.log(meraparent.children[0]) 
+    console.log(meraparent.children[1].innerHTML) 
+
+    for (let i = 0; i < meraparent.children.length; i++) {
+        console.log( meraparent.children[i]);// sari values print
+        
+    }
+
+</script>
+
+</html>

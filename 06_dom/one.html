@@ -18,6 +18,7 @@
             document.getElementById('title').className // o/p 'headiding'
 
             document.getElementById('title').getAttribute('id')
+            
             "title"
 
             document.getElementById('title').getAttribute('class')
@@ -73,11 +74,67 @@
 
             document.querySelector('input[type="password"]')
             <input id="" type="password" name="">
+
+
+
+             
+-------------------------------------------------------------------------------------------------------------------------------
+
+           ######## queryselctor sirf phela element leti hai or queryselectorall 
+           document.querySelectorAll('li') const merilist = document.querySelectorAll('li') 
+
+
+            merilist
+
+            merilist[0].style.color = 'red'
+            "red"
+            merilist[1].style.color = 'blue'
+            "blue"
+            merilist[2].style.color = 'yellow'
+            "yellow" 
+
+
+            const merilist = document.querySelectorAll('li')
+            
+            merilist.forEach(function (l) {
+            l.style.backgroundColor = 'green'
+            }) 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+            document.getElementsByClassName('list-itemshai')
+
+
+            const mericlass = document.getElementsByClassName('list-itemshai')
+
+            mericlass
+
+
+            Array.from(mericlass) // ye class ko array me convert kiya hai
+
+
+            const meriaraymeconvertclass = Array.from(mericlass)
+
+            meriaraymeconvertclass
+
+
+            ####### ab for each me ho jaye ga kyo ki ab array me converted hai
+            meriaraymeconvertclass.forEach(function(li){
+            li.style.color = "orange"
+            })
+
         -->
         <h2>1</h2>
         <h2>2</h2>
         <h2>3</h2>
         <input type="password" name="" id="">
+        <ul>
+            <li class="list-itemshai">chaar</li>
+            <li class="list-itemshai">one</li>
+            <li class="list-itemshai">two</li>
+            <li class="list-itemshai">three</li>
+
+        </ul>
         <p> Lorem ipsum dolor sit amet consectetur corrupti eaque odio aut tempore doloremque, deserunt officia?</p>
     </div>
 </body>
