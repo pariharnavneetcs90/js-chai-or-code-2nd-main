@@ -1,0 +1,38 @@
+<!-- https://www.youtube.com/watch?v=xAvTgCsCHLs&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=33 -->
+<!--  33  17:30--> 
+<!-- how to open live server -->
+
+<!-- how to add new elment in dom -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>three.js</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const yediv = document.createElement('div') // DIV BAN GAYA 
+    console.log(yediv);
+    yediv.className = 'meri-class-hai' // class name a gaya
+    yediv.id = Math.random() // id a gayi hai
+    yediv.setAttribute('ek-KEY-diva' , "ek-value")
+    yediv.style.backgroundColor = 'green'
+
+    //ab phele is div me koi text to add kare ga tab pata chale ga na style vagera
+
+    // 2 ways
+
+    // 1st way (over ride kar deta hai purana hata deta hai)
+   // yediv.innerText = "mera naam joker" // not preferd
+
+    // 2nd way
+    const textaddkiya = document.createTextNode('a b c d e f') // text create kiya
+    yediv.appendChild(textaddkiya) // ye text(child) ko div(parent) me attach kiya
+
+    document.body.appendChild(yediv)// same as above yediv(child) ko body(parent) me attach kiya  hai
+    
+</script>
+</html>
