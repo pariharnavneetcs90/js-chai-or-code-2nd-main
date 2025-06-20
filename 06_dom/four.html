@@ -1,4 +1,4 @@
-<!-- https://www.youtube.com/watch?v=xAvTgCsCHLs&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=33 -->
+<!-- https://www.youtube.com/watch?v=VQlY-X_eeTE&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=34-->
 <!--  34  --> 
 <!-- how to open live server -->
 
@@ -13,9 +13,64 @@
     <title>four.html</title>
 </head>
 <body style="background-color: #212121; color: #fff;">
-    <h1>n</h1>
+
+    <ul class="languagess">
+        <li>javascript</li>
+    </ul>
 </body>
 <script>
+    // add in dom
+
+    
+
+    // ek function bana reha hai taki hum log li add kar sake ul me 
+    function addLanguage(langName){
+       const ekli = document.createElement('li') // ye li(list) banaye ga
+       ekli.innerHTML = `${langName}`// ye li(list) me text add kare ga
+       document.querySelector('.languagess').appendChild(ekli)// ye nai li ko ul ki class me attach karne ke liye
+    }
+
+    addLanguage("navneet")
+    addLanguage("ishika")
+
+    // send way to add item in ul better way
+
+    function addliOptimised(langName){
+        const ekli = document.createElement('li')
+        ekli.appendChild(document.createTextNode(langName))
+        document.querySelector('.languagess').appendChild(ekli)
+    }
+    addliOptimised('ayush')
+
+    //test my version sucess
+    function newlitest(ln){
+    const newliadd = document.createElement('li')
+    newliadd.textContent = `${ln}`
+        document.querySelector('.languagess').appendChild(newliadd)
+    }
+    newlitest('ramesh')
+
+    //test my verion to add in dom without function (sucess)
+
+    const testli = document.querySelector('li')
+    testli.textContent = 'antony'
+    document.querySelector('.languagess').appendChild(testli)
+
+    //edit in dom
+    const editli = document.querySelector('li:nth-child(2)') // li ki 2nd value change ho gi
+    const newli = document.createElement('li')
+    newli.textContent ="ye hai chnged text"
+    editli.replaceWith(newli)
+
+    // edit second way
+
+    const firstLanguage = document.querySelector("li:first-child")
+    firstLanguage.outerHTML = '<li> hi (changed text)</li>'
+
+    // remove (working)
+    // const lastLang = document.querySelector('li:last-child')
+    // lastLang.remove()
+
 
 </script>
 </html>
