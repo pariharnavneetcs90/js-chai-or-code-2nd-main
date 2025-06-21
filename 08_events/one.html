@@ -1,0 +1,96 @@
+<!--https://www.youtube.com/watch?v=_ALUMTa8BAE&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=36-->
+<!-- 36 -->
+<!--events in js-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+            <li><img width="200px" id="ayush" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="syam" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // this is good aprooch as it use onclick but addEvent lisner is better
+    document.getElementById('owl').onclick = function(){
+        alert('this is an owl')
+    }
+    // addEventListener is better approch
+    document.getElementById('river').addEventListener('click',function(){ // here click can be double click or hover etc
+        alert('yeh river hai')
+    })
+    //event 
+    document.getElementById('prayer').addEventListener('click',function(e){console.log(e)},false) // false is for event propogation
+
+    // ye sab phadna hai events me
+
+     // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+//---------------------------------------------------------------------------------------------------------------
+    // event propogation (event bubble)
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log('click inside ul');
+    // },false)
+    //  document.getElementById('ayush').addEventListener('click',function(e){
+    //     console.log('ayush clicked');
+    // },false)
+
+    // if we give false (child to parent)
+
+    // explain if we click any image inside it images id its o/p is click inside ul
+    // but if click ayush id it will first triger ayush then outer images id o/p  
+    //1st     ayush clicked 
+    //2nd     click inside ul
+
+    // console.log('\n')
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log('click inside ul');
+    // },true)
+    //  document.getElementById('syam').addEventListener('click',function(e){
+    //     console.log('syam clicked');
+    // },true)
+
+    // if give true(parent to child)
+
+    //1st     click inside ul
+    //1nd    ayush clicked 
+//---------------------------------------------------------------------------------------------------------------
+
+document.getElementById('google').addEventListener('click',function(e){
+    e.preventDefault(); // ab google pe click kare ga to kuch nahi ho ga
+},false)
+//---------------------------------------------------------------------------------------------------------------
+
+//imp get getElementById me('images') use karte hai or querySelector me ('#images') # for id . for class
+
+// phtot pe click kiya or hat jaye 
+
+document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target.parentNode) //.target se images ata hai  or // .parentNode se <li> select ho ga kyo ki li hatana hai
+    console.log(e.target.tagName)// tagname batata hai image hai ki li  
+        
+    let ekremove =e.target.parentNode
+    ekremove.remove()  // remove() method hai jise photo hate gi
+})
+</script>
+</html>
