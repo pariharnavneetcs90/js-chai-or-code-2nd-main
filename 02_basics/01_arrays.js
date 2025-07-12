@@ -1,4 +1,5 @@
 //https://www.youtube.com/watch?v=cejBux2gtEE&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=14
+//14
 const myArr = [12, 14, 17, 22, 32, 45, 68, 72, "navneet"] // array declare
 console.log(myArr[1]);
 
@@ -34,18 +35,18 @@ console.log(typeof newArr);
 //+++++++++++++++++++++++++++++++++++++++++++++ slice or splice me main diffrenece ye hai ki slice- last index nahi include karta
 // or splice last index bhi include karta hai or baki array ko bhi change kar deta hai    
 console.log('\n')
-console.log('concept of slice and splice')
+console.log('-----------------------concept of slice and splice---------------------')
 
 const testArray = [0, 1, 2, 3, 4]
 console.log('A :this is orignal test arrary', testArray)
 
 const my1 = testArray.slice(1, 3) // third index not included
 console.log("B: slice array", my1)
-console.log("C: array after slice", testArray)
+console.log("C: array after slice", testArray,'(orignal array same hai)')
 
 const my2 = testArray.splice(1, 3)//third index include ho ga
 console.log('D: output of splice', my2)
-console.log('E:orignal array after splice', testArray)
+console.log('E:orignal array after splice', testArray, '(orignal array change ho gayi hai hai)')
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ summary
 
