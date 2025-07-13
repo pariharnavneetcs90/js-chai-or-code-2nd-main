@@ -35,16 +35,18 @@ console.log('\x1b[35m          object ki merging       \x1b[0m')
 
 const obj1 ={1:'a',2:'b'}
 const obj2 ={3:'c',4:'d'}
+const obj6 = {name :'mia' , lastname : "khalifa"}
 
 const obj3 ={obj1,obj2}// dont use this
 console.log(obj3)// sari element nahi mile sirf nested ho gaya
 console.log('\n')
+console.log(obj3.obj1[1])
 
 const obj4 =Object.assign({},obj1,obj2)// this is good butnot perfect
 console.log(obj4)
 console.log('\n')
 
-const obj5={...obj1,...obj2}// perfect and easy absolute cenima
+const obj5={...obj1,...obj2,...obj6}// perfect and easy absolute cenima
 console.log(obj5)
 //---------------------------------------------------------------------------------------------------------------------------
 // take all key of an object in array
