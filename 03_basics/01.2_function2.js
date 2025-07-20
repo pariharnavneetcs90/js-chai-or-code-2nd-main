@@ -1,5 +1,5 @@
 //https://www.youtube.com/watch?v=t7ZHPhgdA4U&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=20
-
+//20
 // function with object and array
 
 function calculateCartPrice(...nums){// ... is rest operator ye is liye use hua hai kyo ki hume nahi pata kitne arguments aye ga to parameter kitna ho ga to rest use kare ga

@@ -1,5 +1,5 @@
 //https://www.youtube.com/watch?v=9ksqBa8_txM&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=23
-
+//23
 // arrow function
 
 const user = { // this is object
@@ -28,8 +28,9 @@ function chai (){
 chai()// o/p undefind kyo ki  //this object me kaam karta hai function me nahi
 
 //+++++++++++++++++++++++++++++++++++++++ arrow
-//multiline
+console.log('\x1b[35m         Arrow function      \x1b[0m')
 
+//multiline
 const greet = () => {
     console.log("Hello!");
   };
@@ -59,5 +60,5 @@ console.log(Two(4,4))
 const three =(num1,num2) => (num1+num2) // agra return nahi lagana to () lagana pade ga
 console.log(three(9,4))
 
-const four =(num1,num2) => ({username:"navneet"}) // yaha pe obect liya hai usko return karna padta hai lekin humne {} upar () laga diya to retun nahi lagana pada
-console.log(four(8,4))
+const four =() => ({username:"navneet"}) // yaha pe obect liya hai usko return karna padta hai lekin humne {} upar () laga diya to retun nahi lagana pada
+console.log(four())

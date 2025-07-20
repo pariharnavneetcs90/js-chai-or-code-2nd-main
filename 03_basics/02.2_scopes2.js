@@ -1,5 +1,5 @@
 //https://www.youtube.com/watch?v=eWwge2YpHhc&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=22
-
+//22
 // nested scope samjhe ga
 // baccha papa se pesa le sakta hai lekin baap bacche se pesa nahi le sakte
 // child parent ko acces kar pate hai lekin parent child ko nahi 
