@@ -14,6 +14,8 @@ console.log(newNum)
 // channing (multiple map filter)
 console.log("\n")
 // jab map ke baad map lagte hai to orhinal value se dubara nahi lteta vo phle map ne jo value di usse leta hai
-const newNumber = myNums.map((num1)=> num1 * 10).map((num2)=>num2 +1). filter((num3) => num3 >=30)
+const newNumber = myNums.map((num1)=> num1 * 10)
+                        .map((num2)=>num2 +1)
+                        .filter((num3) => num3 >=30)
 console.log(newNumber)
 

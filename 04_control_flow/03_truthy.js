@@ -1,4 +1,6 @@
 //https://www.youtube.com/watch?v=0P_YvC6Gg0c&t=1785s
+//30:56
+
 const userEmil = "hitesh.ai" // not empty string is considerd true
 
 if (userEmil){
@@ -25,7 +27,7 @@ if (useEil){
 
 // falsy values -
 
-// false , 0, -0, BifInt 0n , "" ,null ,underfinded ,NaN
+// false , 0, -0, BifInt, 0n , "" ,null ,underfinded ,NaN
 
 // truthy values -
 

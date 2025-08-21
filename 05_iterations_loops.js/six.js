@@ -10,12 +10,14 @@ const newNum2 = myNums.filter ((eknum) =>{
  return eknum > 4 // agar curly brace lagya hai arrow function me to return likhna ho ga
 } )
 
+console.log("\n")
+//--------------------------------------------------------------------------------
 // for each // thoda jada complex hai iteration ke liye
 
 const newNumms = [] // empty array kyo ki isme push kare ga myNums ki value
 
 myNums.forEach((number) =>{
-    if (number > 4) {
+    if (number > 7) {
         newNumms.push(number) // new epmty array me push kar raha hai
     }
 })
@@ -24,6 +26,7 @@ console.log(newNumms)
 console.log("\n")
 
 // same code humlogo ne filter se bhi kiya or for each se bhi
+//--------------------------------------------------------------------------------
 
 //++++++++++++++++++++++++++++++ extreamly imp
  
@@ -41,17 +44,25 @@ const books = [
   ];
 
 //const prit = books.filter((bk)=>bk) // mera effort kaam karta hai kelin bk koi filte nahi laga raha sirf khe raha hai ki tuue so niche wala jada sahi hai methord 
+console.log('\x1b[35m  full print   \x1b[0m')
+
 const prit = books.filter(()=>true) // full print 
 console.log(prit)
 
 console.log("\n")
+console.log('\x1b[35m  history    \x1b[0m')
+
 const prit2 = books.filter((bk)=> bk.genre==="History") 
 console.log(prit2) // correct
 
 console.log("\n")
+console.log('\x1b[35m  history and publish 1986    \x1b[0m')
+
 const prit3 = books.filter((bk)=> bk.genre==="History" && bk.publish=== 1986) 
 console.log(prit3)
 
 console.log("\n")
+console.log('\x1b[35m   publish >=2000    \x1b[0m')
+
 const prit4 = books.filter((bk)=> bk.publish >= 2000) 
 console.log(prit4)

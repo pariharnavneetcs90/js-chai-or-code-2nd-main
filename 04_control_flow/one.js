@@ -1,6 +1,7 @@
 // https://www.youtube.com/watch?v=0P_YvC6Gg0c&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=26
 
 // if 
+console.log('\x1b[35m          if       \x1b[0m')
 
 const isUserloggedIn = true 
 if (2=="2"){ // that menan this is true
@@ -19,6 +20,7 @@ if (2 != 3 ){ // 2 is not equal to 3
 //triple eual to check if values and datatype are same(===) e.g 2==="2" (this is false as one is nuber and other is string) 
 
 // conditionals ------------ <,>,<=,>=,==,===, !==
+console.log('\x1b[35m          conditionals       \x1b[0m')
 
 
 console.log("\n")
@@ -33,6 +35,7 @@ else{
 }
 
 console.log("\n")
+console.log('\x1b[35m          if else       \x1b[0m')
 
 const blance =1000
 
@@ -47,6 +50,8 @@ else if (blance <900) {
     console.log("less than 1200")
 }
 // multiple conditions
+console.log('\x1b[35m       multiple   conditionals       \x1b[0m')
+
 console.log("\n")
 
 const isUserlogged =true
@@ -64,6 +69,8 @@ if (userloggedfromgmail || userloggedinfromfacbook ){ // OR || isme ek bhi condi
 }
 
 console.log("\n")
+console.log('\x1b[35m      nullish coalescing Operator (??)       \x1b[0m')
+
 //42:16 nullish coalescing Operator (??) --- (deals with null and undefinined)
 // ye kam ase kaerta hai ki agar maan lo database se null a jaye to structure ko kharab na kare 
 let val1;
@@ -83,6 +90,8 @@ val4 = null?? 10 ?? 20 // first value assign kare ga
 console.log(val4)
 
 console.log("\n")
+console.log('\x1b[35m     ternary operator       \x1b[0m')
+
 // ternary operator
 
 //condition ? true : false 

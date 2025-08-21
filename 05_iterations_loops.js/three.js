@@ -4,12 +4,16 @@
 
 // [{},{},{}] array ke andar objects
 
+
+console.log('\x1b[35m   for of loop      \x1b[0m')
 // for of loop
 
 const myArry = [1,2,3,4,5,"hi",10]
-for (const index of myArry) {
-    console.log(index)
+for (const i of myArry) {
+    console.log(i)
 }
+
+console.log("\n")
 
 const grettings = "hello world"
 for(const gree of grettings){
@@ -17,6 +21,8 @@ for(const gree of grettings){
 }
 
 // map 
+console.log('\x1b[35m  map    \x1b[0m')
+
 // chatgpt
 // A Map is a built-in object that stores data in key-value pairs, where:
 
@@ -35,6 +41,11 @@ myMap.set('age', 25);
 myMap.set(true, 'isActive');
 myMap.set({ x: 1 }, 'objectKey');
 
+
+console.log("\n")
+console.log(myMap)
+
+console.log("\n")
 console.log(myMap.get('name'));   // Alice
 console.log(myMap.get(true));     // isActive
 
@@ -53,7 +64,7 @@ console.log(thisMap)
 console.log("\n")
 
 for (const [ekKey, ekvalue] of thisMap) {
-    console.log(ekKey , "-", ekvalue)
+    console.log(ekKey , ekvalue)
 }
 
 //for of loop in object nahi hota hai ( is not iterable)
@@ -64,8 +75,8 @@ const myObject ={
     'game2' : "spiderman"
 }
 
-for (const [ekKey, ekvalue] of myObject) {
+//for (const [ekKey, ekvalue] of myObject) {
     //console.log(ekKey , "-", ekvalue) //  is not iterable
-}
+//}
 
 

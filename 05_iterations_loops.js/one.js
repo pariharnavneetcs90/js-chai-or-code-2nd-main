@@ -21,6 +21,7 @@ for (let i = 10; i <= 20; i++) {
 
     console.log(element);    
 }
+console.log('\x1b[35m     nested loops       \x1b[0m')
 
 // nested loops
 // chat gpt
@@ -45,7 +46,7 @@ console.log("\n")
 
 console.log('\n')
 // chat gpt
-for (let i = 1; i <= 3; i++) {
+for (let i = 1; i <= 3; i++) {16
     console.log(`Table of ${i}`);
     
     for (let j = 1; j <= 10; j++) {
@@ -55,6 +56,17 @@ for (let i = 1; i <= 3; i++) {
     console.log(''); // Just to add a blank line between tables
 }
 console.log('\n')
+console.log('\x1b[35m     test      \x1b[0m')
+
+const arr1 = [1,2,3,4,5]
+
+console.log(arr1)
+console.log(arr1.length)
+console.log(arr1.indexOf(5))// index 0 se suru hota hai
+
+console.log('\n')
+console.log('\x1b[35m     array ke loops      \x1b[0m')
+
 // array ke loops
 let myArray = ["flash" , "batman" , "superman"]
 
@@ -86,3 +98,7 @@ for (let i = 1; i < 10; i++) {
     console.log(`value is ${i}`)
     
 }
+
+
+
+

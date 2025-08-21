@@ -1,6 +1,6 @@
 // https://www.youtube.com/watch?v=0P_YvC6Gg0c&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=26
 // shift arrow and down arrow to duplicate in vs code
-
+// 24:15 time
 // basic
 // switch (key){
 //     case value :
