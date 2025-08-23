@@ -3,12 +3,12 @@
 
 // reduce
 
-const myNums = [10,20,30]
+const myNums = [10, 20, 30]
 
-const myTotal = myNums.reduce(function (ekaccumlator , ekcurrentvalue){
+const myTotal = myNums.reduce(function (ekaccumlator, ekcurrentvalue) {
     console.log(`acc : ${ekaccumlator} and current value ${ekcurrentvalue}`)
     return ekaccumlator + ekcurrentvalue // ye hum log + kar reha hai har baar accumator or current value change ho gi
-},5) // ye 5 matlab intilase kaha se suru ho ga 
+}, 5) // ye 5 matlab intilase kaha se suru ho ga 
 
 console.log(myTotal)
 
@@ -20,25 +20,25 @@ console.log(myTotal)
 console.log("\n")
 
 // same code arro function me likhne ki kosish much easy
-const myTotal2 = myNums.reduce((ekAcc,ekCurr)=> ekAcc+ekCurr ,7)
+const myTotal2 = myNums.reduce((ekAcc, ekCurr) => ekAcc + ekCurr, 7)
 console.log(myTotal2)
 
 console.log("\n")
 //---------------------------------------------------------------
-const cart =[
+const cart = [
     {
-        course : "python",
-        price : 1
+        course: "python",
+        price: 1
     },
     {
-        course : "js",
-        price : 2
+        course: "js",
+        price: 2
     },
     {
-        course : "java",
-        price : 3
+        course: "java",
+        price: 3
     },
 ]
 
-const totalprice = cart.reduce((ekacc , ekitem)=>ekacc+ ekitem.price ,0) //0 kyo ki cart me 0 se paisa suru ho ga ok
+const totalprice = cart.reduce((ekacc, ekitem) => ekacc + ekitem.price, 0) //0 kyo ki cart me 0 se paisa suru ho ga ok
 console.log(totalprice) 
