@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>three.event</title>
+</head>
+<body>
+    <h1>aaaaaaaaaaaaaaaa</h1>
+    <button id="ye-start">start</button>
+    <button id="ye-stop">stop</button>
+   
+</body>
+ <script>
+    //setInterval(function,2000,parameter)
+
+    //console me har 2 sec me date print kareye ga
+    //   setInterval(function(){
+    //     console.log('hitesh',Date.now());
+    //   },2000)
+//--------------------------------------------      
+const sayDate = function(i){
+    console.log(i, Date.now());
+}
+    // setInerval star karta hai
+    //const a = setInterval(sayDate, 1000 , 'hi')
+    
+    //clear inerval stop karta hai
+    //clearInterval(a)
+
+//------------------------------------------------------------------
+// abe button me ye funcnality add kare ga start stop ki
+//start kar diya
+ let a
+
+document.querySelector('#ye-start').
+addEventListener('click', function(){
+a = setInterval(sayDate, 1000,'hi')
+    console.log('start kar diya')
+})
+//stop kar diya
+document.querySelector('#ye-stop').
+addEventListener('click', function(){
+    clearInterval(a)
+    console.log('stop kar diya hai')
+})
+
+
+
+
+
+</script>
+</html>

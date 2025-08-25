@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>two.event</title>
+</head>
+<body>
+    <h1>chai or code</h1>
+    <button id="yestop">stop</button>
+   
+</body>
+ <script>
+        //settimeout(funcrtion,timeout)
+        setTimeout(function(){
+            console.log('name apper after 2 second')
+        },2000) // 2000 is 2 sec
+//----------------------------------------------------------------------------
+        const sayhitesh = function(){
+            console.log('name apper after 3 second')
+        }
+
+        setTimeout(sayhitesh,3000)
+//------------------------------------------------------------------------
+        const changeText = function(){
+            document.querySelector('h1').innerHTML='Navneet'
+        }
+        const changeMe = setTimeout(changeText,3000)
+
+//--------------------------------------------------------------------------------------------------------------------------------------
+// code taki text change na ho h1 wala
+document.querySelector('#yestop').
+addEventListener('click', function(){
+    clearTimeout(changeMe)
+    console.log('stop kar diya hai')
+})
+</script>
+</html>
