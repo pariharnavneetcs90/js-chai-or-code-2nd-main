@@ -1,4 +1,5 @@
 <!-- https://www.youtube.com/watch?v=efrW5-IYoCU&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=38
+ 38
 18:53
 
 ye project ye hai ki star or stop se background button change ho browser me
@@ -27,7 +28,42 @@ ye project ye hai ki star or stop se background button change ho browser me
     <button id="start">Start</button>
     <button id="stop">Stop</button>
     <script >
-        //
+        // 1st random color generate kare ga
+        // hex value 0 se 9 tak jati hai or A se F "0123456789ABCDEF"
+        const randomColor = function(){
+          const ye_hex = "0123456789ABCDEF"// 16 number+alphabet hai 
+          let ye_colour = '#'
+          for (let i = 0 ; i<6; i++) { // 6 tak loop kyo ki five values chaiye #FFFFF
+            ye_colour += ye_hex [Math.floor(Math.random() * 16)];
+            // ye_colur me phele se # hai ab baki values chaiye 
+            // += is liye use kiya hai kyo ki hume 16 value add chaiye
+            // math.floor sirf ek value deta hai eg- 5.566542 to de ga 5
+            // math.random random number deta hai * 16 is liye kyo ki "0123456789ABCDEF" 16 hai
+          }
+          return ye_colour;
+        };
+        console.log(randomColor());
+
+        // ab star or stop me upar vali functionality dalni hai
+        let a ; // isko bhar liya hai taki stopChangingColor bhi use kar le nahi to startChangingColor ke andar likhe ga to local sope ho ga global nahi 
+        
+        const startChangingColor = function(){
+          a = setInterval(changebgColor , 1000) // changebgColor function hai or 1000 matalb har sec me change ho ga iterval
+
+          function changebgColor(){
+            document.body.style.backgroundColor = randomColor();
+            //document ne body liya uske andar style liya uske andar backgroundcolour liya or usko randomColor() function de diya
+          }          
+        };
+        const stopChangingColor = function(){
+          clearInterval(a)
+        };
+
+        document.querySelector('#start').addEventListener
+        ('click',startChangingColor)
+        document.querySelector('#stop').addEventListener
+        ('click',stopChangingColor)
+
     </script>
   </body>
 </html>
