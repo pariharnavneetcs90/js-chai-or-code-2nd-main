@@ -2,7 +2,7 @@
 https://www.youtube.com/watch?v=pDPAcYdSse8&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=39
 39
 -->
-
+<!-- jada important nahi hai kyo ki fech naya hai or accha kaam karta hai -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,5 +18,29 @@ https://www.youtube.com/watch?v=pDPAcYdSse8&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5
 4	DONE	The operation is complete.
 
 </body>
-
+<script>
+    const a = 'https://api.github.com/users/hiteshchoudhary'
+    //1st request send
+    const superman = new XMLHttpRequest(); // XMLHttpRequest(); is merthod which send xml request // new matlab object bheje ga 
+    //2nd  open() me do parameter jate hai method(GET,POST,PUT request) and string ( jo api hai )
+    superman.open('GET', a)
+    superman.onreadystatechange = function(){ // ye funtion hai is liye banaya hai ki sate ko constatly check kare 
+        console.log(superman.readyState); // ye kon si sate me hai batata hai line no 15 0 se 4 tak sate hai 
+        if (superman.readyState === 4) {
+            const b = JSON.parse(this.responseText) // this se followes ka data aya likin string me hai , JSON.parse use karete hai string ko jason me convert karne ke liye
+            console.log('this is type of resopsnse text--- ',typeof b);
+            console.log('this is foloowes of chai or code in github',b.followers);
+        }
+    }
+    superman.send();
+</script>
 </html>
+
+
+<!--
+gpt
+
+This code makes an AJAX GET request to GitHub’s API using XMLHttpRequest, keeps checking the state of the request, and once data is fully received (readyState = 4), it parses the response from a string → object, and prints the followers count.
+
+Now, people rarely use XMLHttpRequest these days. Instead, we use fetch() (modern & cleaner).
+-->
