@@ -25,7 +25,8 @@ function setUsername(username){
 function CreateUsers(username, email ,password){
     this.email =email
     this.password=password
-    setUsername.call(this,username)
+
+    setUsername.call(this,username) // super key woard use kar lo better hai 06_inheritance.js me upar ka code
 }
 
 const cha =new CreateUsers('chai',"chai@google", "123")

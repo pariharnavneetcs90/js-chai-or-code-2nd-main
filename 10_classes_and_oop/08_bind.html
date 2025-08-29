@@ -1,0 +1,35 @@
+<!-- https://www.youtube.com/watch?v=75dMiOY_4ac&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=46
+46 
+
+ab binf=d bhot kam use hota hai legasy code me hota hai 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react</title>
+</head>
+<body>
+    <button> click </button>
+</body>
+<script>
+    class a{
+        constructor(){
+            this.libaray = 'react'
+            this.server = 'https://localhoast:300'
+
+            //requirment
+            document.querySelector('button')
+            .addEventListener('click', this.ye_click .bind(this))
+            
+        }
+
+        ye_click(){
+            console.log('btoon is clicked')
+            console.log(this.server)// this is not working so we use bind
+        }
+    }
+    const app = new a()
+</script>
+</html>

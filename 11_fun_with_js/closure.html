@@ -1,0 +1,105 @@
+<!--
+https://www.youtube.com/watch?v=VaH09NXQZ58&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=49
+49
+clouse and lexical scope
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+
+</body>
+
+<script>
+    //------------------lexical scope
+    function outer(){
+        let username = "hitesh"
+
+            function inner(){
+                console.log( 'inner' ,username)
+                let secret = 'my123'
+            }
+            inner() // ---> working kyo ki username bhar hai andar call kar sakte hai 
+    
+            function innerTwo(){
+                console.log('innerTwo',username)// woking
+               // console.log(secret) -----> ye work nahi kare ga kyo ki inner and innerTwo sblings hai or sblings apas me nahi baate
+            }
+        }
+    // outer() ---->> yaha pe error aye ga kyo ki username andar hai hum bahar lena chate hai
+    // console.log('too outer',username)
+
+//---------------------- closure
+    function init() {
+        let name = "Mozilla"; 
+        function displayName() 
+        {
+            console.log(name); 
+        }
+        displayName();
+}
+init();
+
+/*
+Step-by-Step Explanation
+
+init() runs.
+
+Inside init, a variable name = "Mozilla" is created.
+
+A function displayName() is defined inside init().
+
+This function uses name.
+
+When we call displayName(), it logs "Mozilla".
+
+🔥 Where is the closure here?
+
+Even though name belongs to init(),
+
+the inner function displayName() can still access it.
+
+That relationship (inner function “remembers” parent variables) is called a closure.
+
+🧠 Think Like This:
+
+displayName() carries a backpack 🎒 with it.
+
+Inside the backpack → all the variables from its parent (init) that it needs (name).
+
+Whenever you call displayName(), it opens the backpack and finds name.
+*/
+</script>
+
+<script>
+    //------------------------closure ka implementation 
+// kam kar raha lekin kam efficient hai 
+
+    // document.getElementById('orange').onclick = function(){
+    //     document.body.style.backgroundColor= 'orange'
+    // }
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor= 'green'
+    // }
+
+// repeat na ho to function bana liya 
+
+function clickHandel(coloures){
+    return function(){
+        document.body.style.backgroundColor = `${coloures}`
+    }
+    
+}
+
+document.getElementById('orange').onclick = clickHandel('orange')
+document.getElementById('green').onclick = clickHandel('green')
+
+</script>
+</html>
